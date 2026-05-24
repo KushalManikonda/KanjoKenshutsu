@@ -4,6 +4,15 @@
 
 ---
 
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![WavLM](https://img.shields.io/badge/WavLM-Speech%20Encoder-purple)
+![RoBERTa](https://img.shields.io/badge/RoBERTa-NLP%20Encoder-red)
+![Librosa](https://img.shields.io/badge/Librosa-Audio%20Processing-green)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter)
+![HuggingFace](https://img.shields.io/badge/HuggingFace-Transformers-yellow?logo=huggingface)
+
+---
+
 ## System Architecture
 
 ![System Architecture](final/assets/architecture_image.png)
@@ -119,26 +128,30 @@ Emotion Classes:
 
 ---
 
-## Key Experimental Findings
+## Key Scientific Findings
 
-* Speech-only modelling achieved near-perfect performance on TESS.
-* Text-only modelling collapsed to near-random prediction behavior.
-* Adaptive gated fusion consistently prioritized speech representations.
-* The model autonomously learned speech-dominant multimodal behavior.
-* TESS transcript semantics contributed minimal emotional information.
+- The proposed WavLM-based speech pipeline achieved near-perfect performance on the TESS dataset with 99.29% validation accuracy and 99.29% macro F1-score, demonstrating strong acoustic emotion separability.
 
----
+- The text-only RoBERTa pipeline collapsed to near-random prediction behavior with 14.29% validation accuracy and 3.57% macro F1-score, indicating that TESS transcripts lacked sufficient semantic emotional richness for standalone text-based emotion recognition.
 
-## Scientific Insights
+- Confusion matrix analysis revealed complete dominant-class prediction collapse in the text-only model, showing that the textual representations failed to learn meaningful emotion-discriminative semantic features.
 
-The experiments revealed that the TESS dataset is strongly speech-dominant, where emotional information is primarily encoded through acoustic and prosodic speech characteristics rather than textual semantics.
+- Adaptive gated multimodal fusion autonomously learned speech-dominant behavior and consistently prioritized acoustic representations during emotion classification.
 
-Fusion gate analysis demonstrated:
+- Fusion gate analysis showed approximately:
+  - ~81% Speech Contribution
+  - ~19% Text Contribution
 
-* ~81% speech contribution
-* ~19% text contribution
+- Multimodal fusion performance remained nearly identical to the speech-only architecture, indicating that emotional information within TESS is overwhelmingly encoded through acoustic and prosodic speech characteristics.
 
-showing that the adaptive fusion mechanism dynamically learned modality importance instead of assuming equal multimodal contribution.
+- Representation-level analysis using t-SNE / UMAP visualizations demonstrated that:
+  - speech embeddings formed highly separable emotional clusters,
+  - text embeddings exhibited severe overlap and weak semantic separability,
+  - and fusion embeddings closely resembled speech embedding distributions.
+
+- The experiments validate that multimodal emotion recognition systems should not assume equal modality contribution and highlight the importance of adaptive modality weighting and modality informativeness analysis.
+
+- An important experimental limitation is that stratified random train-validation splitting introduced speaker overlap between training and validation sets, which may inflate absolute performance metrics due to speaker-specific acoustic pattern learning and speaker leakage.
 
 ---
 
