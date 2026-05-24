@@ -6,7 +6,7 @@
 
 ## System Architecture
 
-![System Architecture](KushalManikonda/KanjoKenshutsu/main/finalassets/system_architecture.png)
+![System Architecture](final/assets/architecture_image.png)
 ---
 
 ## Overview
