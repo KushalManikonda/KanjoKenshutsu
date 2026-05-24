@@ -174,6 +174,8 @@ Emotion Classes:
 4. Multimodal Fusion for Speech-Text Emotion Recognition
 5. M4SER: Multimodal Multi-representation Multitask and Multistrategy Learning for SER
 
+Relevant research papers used during development are available in the `references/` directory.
+
 ---
 
 ## Installation
