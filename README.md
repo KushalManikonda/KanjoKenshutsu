@@ -1,7 +1,12 @@
 # Kanjo Kenshutsu
 
-### *Decoding Human Emotion through Adaptive Multimodal Intelligence*
+### Decoding Human Emotion through Adaptive Multimodal Intelligence
 
+---
+
+## System Architecture
+
+![System Architecture](KushalManikonda/KanjoKenshutsu/main/finalassets/system_architecture.png)
 ---
 
 ## Overview
