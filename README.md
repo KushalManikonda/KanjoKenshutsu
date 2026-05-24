@@ -176,6 +176,24 @@ Emotion Classes:
 
 ---
 
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/KushalManikonda/KanjoKenshutsu.git
+cd KanjoKenshutsu
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+
 ## Author
 
 **Kushal Manikonda**  
