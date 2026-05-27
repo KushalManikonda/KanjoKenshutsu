@@ -178,6 +178,28 @@ Relevant research papers used during development are available in the `reference
 
 ---
 
+## Project Structure
+
+```text
+KanjoKenshutsu/
+│
+├── final/
+│   └── models/
+│       ├── speech_pipeline/
+│       │   └── 01-speech-pipeline (1).ipynb
+│       │
+│       ├── text_pipeline/
+│       │   └── 02-text-pipeline.ipynb
+│       │
+│       └── fusion_pipeline/
+│           └── 03-fusion-pipeline-v2.ipynb
+│
+├── requirements.txt
+└── README.md
+```
+
+---
+
 ## Installation
 
 Clone the repository:
@@ -187,7 +209,7 @@ git clone https://github.com/KushalManikonda/KanjoKenshutsu.git
 cd KanjoKenshutsu
 ```
 
-Install dependencies:
+Install all required dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -195,6 +217,216 @@ pip install -r requirements.txt
 
 ---
 
+## Environment Setup
+
+Recommended Environment:
+
+* Python 3.10+
+* CUDA-enabled GPU
+* Jupyter Notebook / Jupyter Lab
+
+Launch Jupyter Notebook:
+
+```bash
+jupyter notebook
+```
+
+or
+
+```bash
+jupyter lab
+```
+
+---
+
+## Running the Pipelines
+
+The project consists of three independent notebook pipelines:
+
+1. Speech Emotion Recognition Pipeline
+2. Text Emotion Recognition Pipeline
+3. Adaptive Multimodal Fusion Pipeline
+
+Execute the notebooks sequentially for complete experimentation and analysis.
+
+---
+
+# 1. Speech Pipeline
+
+Directory:
+
+```text
+final/models/speech_pipeline/
+```
+
+Notebook:
+
+```text
+01-speech-pipeline (1).ipynb
+```
+
+### Purpose
+
+* Audio preprocessing
+* WavLM feature extraction
+* Transformer-based temporal modelling
+* Attention pooling
+* Speech emotion classification
+
+### Steps to Run
+
+1. Open Jupyter Notebook or Jupyter Lab.
+
+2. Navigate to:
+
+```text
+final/models/speech_pipeline/
+```
+
+3. Open:
+
+```text
+01-speech-pipeline (1).ipynb
+```
+
+4. Execute all notebook cells sequentially using:
+
+```text
+Kernel → Restart & Run All
+```
+
+### Output
+
+* Speech emotion embeddings
+* Classification reports
+* Confusion matrices
+* Validation metrics
+* Trained speech model outputs
+
+---
+
+# 2. Text Pipeline
+
+Directory:
+
+```text
+final/models/text_pipeline/
+```
+
+Notebook:
+
+```text
+02-text-pipeline.ipynb
+```
+
+### Purpose
+
+* Whisper transcript processing
+* RoBERTa contextual encoding
+* Semantic emotion modelling
+* Text-only emotion classification
+
+### Steps to Run
+
+1. Navigate to:
+
+```text
+final/models/text_pipeline/
+```
+
+2. Open:
+
+```text
+02-text-pipeline.ipynb
+```
+
+3. Execute all notebook cells sequentially using:
+
+```text
+Kernel → Restart & Run All
+```
+
+### Output
+
+* Text emotion embeddings
+* Classification reports
+* Confusion matrices
+* Validation metrics
+* Text-only experimental analysis
+
+---
+
+# 3. Fusion Pipeline
+
+Directory:
+
+```text
+final/models/fusion_pipeline/
+```
+
+Notebook:
+
+```text
+03-fusion-pipeline-v2.ipynb
+```
+
+### Purpose
+
+* Speech-text embedding fusion
+* Adaptive gated multimodal learning
+* Dynamic modality weighting
+* Final emotion classification
+
+### Steps to Run
+
+1. Navigate to:
+
+```text
+final/models/fusion_pipeline/
+```
+
+2. Open:
+
+```text
+03-fusion-pipeline-v2.ipynb
+```
+
+3. Execute all notebook cells sequentially using:
+
+```text
+Kernel → Restart & Run All
+```
+
+### Output
+
+* Fusion embeddings
+* Adaptive gate analysis
+* Multimodal classification results
+* Representation visualizations
+* Final multimodal evaluation metrics
+
+---
+
+## Important Notes
+
+* Ensure dataset paths are correctly configured before execution.
+* GPU acceleration is strongly recommended for WavLM and RoBERTa inference.
+* Execute notebooks sequentially without skipping cells.
+* Large transformer models may require significant GPU memory.
+
+---
+
+## Experimental Workflow
+
+```text
+Speech Pipeline
+        ↓
+Text Pipeline
+        ↓
+Fusion Pipeline
+        ↓
+Evaluation & Analysis
+```
 
 ## Author
 
